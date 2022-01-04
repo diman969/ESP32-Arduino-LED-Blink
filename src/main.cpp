@@ -1,17 +1,17 @@
 #include <Arduino.h>
-#define ledPin 2
+#define LED_PIN 2
 
 void setup() {
   // put your setup code here, to run once:
-  pinMode(ledPin,OUTPUT);
+  pinMode(LED_PIN,OUTPUT);
   Serial.begin(9600);
-  digitalWrite(ledPin, LOW);
+  digitalWrite(LED_PIN, LOW);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  bool isOn{digitalRead(ledPin)};
-  digitalWrite(ledPin, !isOn);
+  bool isOn{digitalRead(LED_PIN)};
+  digitalWrite(LED_PIN, !isOn);
 
   if(!isOn){
     Serial.println("ON");
